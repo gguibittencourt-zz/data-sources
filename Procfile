@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -Durl.backend=http://tcc-frontend-angular.herokuapp.com $JAVA_OPTS -jar target/*.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar

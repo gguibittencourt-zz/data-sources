@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.nio.charset.Charset;
-import java.util.Random;
-
 @RestController
 @RequestMapping("/api/data-sources")
 public class DataSourceController {

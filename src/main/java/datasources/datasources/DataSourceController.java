@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Random;
+
 @RestController
 @RequestMapping("/api/data-sources")
 public class DataSourceController {
@@ -20,8 +22,8 @@ public class DataSourceController {
 
     @GetMapping("/questao1")
     public ResponseEntity<String> questao1() {
-        Double random = (Double) Math.random();
-        return ResponseEntity.ok(GSON.toJson("{\"dados\": {\"questao1\": " + random.intValue() + ", \"texto\": \"2\"}}"));
+        Random generator=new Random();
+        return ResponseEntity.ok(GSON.toJson("{\"dados\": {\"questao1\": " + generator.nextInt() + ", \"texto\": \"2\"}}"));
     }
 
     @GetMapping("/questao2")

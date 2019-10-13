@@ -23,7 +23,7 @@ public class DataSourceController {
     @GetMapping("/questao1")
     public ResponseEntity<String> questao1() {
         Random generator = new Random();
-        return ResponseEntity.ok(GSON.toJson("{\"dados\": {\"questao1\": " + generator.nextInt(2) + ", \"texto\": \"2\"}}"));
+        return ResponseEntity.ok(GSON.toJson("{\"dados\": {\"questao1\": " + generator.nextInt(100) + ", \"texto\": \"2\"}}"));
     }
 
     @GetMapping("/questao2")

@@ -22,7 +22,7 @@ public class DataSourcesApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins(urlBackend);
+				registry.addMapping("/**").allowedOrigins("**");
 			}
 		};
 	}

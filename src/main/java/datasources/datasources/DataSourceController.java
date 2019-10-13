@@ -20,8 +20,8 @@ public class DataSourceController {
 
     @GetMapping("/questao1")
     public ResponseEntity<String> questao1() {
-        double random = Math.random();
-        return ResponseEntity.ok(GSON.toJson("{\"dados\": {\"questao1\": " + random + ", \"texto\": \"2\"}}"));
+        Double random = (Double) Math.random();
+        return ResponseEntity.ok(GSON.toJson("{\"dados\": {\"questao1\": " + random.intValue() + ", \"texto\": \"2\"}}"));
     }
 
     @GetMapping("/questao2")

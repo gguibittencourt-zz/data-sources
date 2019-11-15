@@ -17,7 +17,7 @@ public class DataSourceController {
     @GetMapping("/")
     public ResponseEntity<String> list() {
         boolean random = Math.random() < 0.5;
-        return ResponseEntity.ok(GSON.toJson("{\"dados\": {\"possuiPlanoProjeto\": " + random + "}}"));
+        return ResponseEntity.ok(GSON.toJson("{\"dados\": {\"possuiPlanoProjeto\": " + random + "}, {\"possuiArtefatoRequisitos\": \"false\"}}"));
     }
 
     @GetMapping("/questao1")
